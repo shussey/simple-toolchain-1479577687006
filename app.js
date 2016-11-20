@@ -18,6 +18,15 @@ var app = express();
 // serve the files out of ./public as our main files
 app.use(express.static(__dirname + '/public'));
 
+
+// sample route with a route the way we're used to seeing it
+app.get('/sample', function(req, res) {
+    res.send('this is a sample!');  
+});
+
+
+
+
 // get the app environment from Cloud Foundry
 var appEnv = cfenv.getAppEnv();
 
